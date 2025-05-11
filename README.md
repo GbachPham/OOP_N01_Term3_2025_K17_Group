@@ -1,6 +1,6 @@
-Quản Lý Bán Hàng
+##Quản Lý Bán Hàng
 
-Group Members:
+##Group Members:
 1. Phạm Gia Bách Github id : @GbachPham
 2. Lữ Trung Anh Github id : @Trugan20
 3. Phùng Thị Hạ Lam Github id : @halam03
