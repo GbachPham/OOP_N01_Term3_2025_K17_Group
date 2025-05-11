@@ -1,3 +1,6 @@
+# OOP_N01_Term3_2025_K17_Group
+Quản Lý Bán Hàng
+
 ## Group Members:
 1. Phạm Gia Bách Github id : @GbachPham
 2. Lữ Trung Anh Github id : @Trugan20
