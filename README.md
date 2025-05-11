@@ -5,8 +5,7 @@ Group Members:
 2. Lữ Trung Anh Github id : @Trugan20
 3. Phùng Thị Hạ Lam Github id : @halam03
 4. Nguyễn Lệ Thu Github id : @nglthu
-
-Câu 6 
+ 
 # Hệ Thống Quản Lý Bán Hàng
 
 ## Mô tả đề tài
