@@ -1,25 +1,12 @@
-# OOP_N01_Term3_2025_K17_Group
-Quản Lý Bán Hàng
-
-## Group Members:
-
-Phạm Gia Bách
-
-Github id : @GbachPham
-
-Lữ Trung Anh
-
-Github id : @Trugan20
-
-Phùng Thị Hạ Lam
-
-Github id : @halam03
-
 # Hệ Thống Quản Lý Bán Hàng
 
 ## Mô tả đề tài
 Đây là đồ án lập trình hướng đối tượng với mục tiêu xây dựng hệ thống quản lý bán hàng. Hệ thống cho phép quản lý thông tin sản phẩm, khách hàng và hóa đơn.
 
+## Thành viên nhóm
+- **Lữ Trung Anh**: Quản lý
+- **Phạm Gia Bách**: Lập trình viên
+- **Phùng Thị Hạ Lam**: Kiểm thử
 
 ## Cấu trúc dự án
 ```
@@ -76,5 +63,3 @@ Github id : @halam03
 Nếu có thắc mắc hoặc góp ý, vui lòng liên hệ:
 - Email: 23010661@st.phenikaa-uni.edu.vn
 - GitHub: https://github.com/GbachPham/OOP_N01_Term3_2025_K17_Group
-
- 
