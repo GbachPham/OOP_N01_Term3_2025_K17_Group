@@ -2,10 +2,16 @@
 Quản Lý Bán Hàng
 
 ## Group Members:
+
 Phạm Gia Bách
+
 Github id : @GbachPham
+
 Lữ Trung Anh
+
 Github id : @Trugan20
-Phùng Thị Hạ Lam 
+
+Phùng Thị Hạ Lam
+
 Github id : @halam03
  
