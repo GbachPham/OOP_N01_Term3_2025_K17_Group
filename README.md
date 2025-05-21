@@ -9,38 +9,18 @@
 - **Phùng Thị Hạ Lam**: Kiểm thử
 
 ## Cấu trúc dự án
-```text
-├── src/                    
-│   ├── model/
-│   │   ├── Sanpham.java       
-│   │   ├── Khachhang.java     
-│   │   ├── Hoadon.java        
-│   │   └── DataManager.java
-│   ├── controller/           
-│   │   ├── SanphamController.java
-│   │   ├── KhachhangController.java
-│   │   └── HoadonController.java
-│   ├── service/
-│   │   ├── SanphamService.java
-│   │   ├── KhachhangService.java
-│   │   └── HoadonService.java
-│   └── Application.java
-├── resources/
-│   └── application.properties
-├── binary/
-│   └── data.dat
-├── diagrams/
-│   ├── class_diagram.png
-│   ├── sequence_diagram_1.png
-│   ├── sequence_diagram_2.png
-│   └── activity_diagram.png
-├── test/
-│   └── SanphamTest.java
-├── build/
-├── build.xml
-└── manifest.mf
-
-
+```
+├── src/                    # Thư mục chứa mã nguồn
+│   ├── Sanpham.java       # Class quản lý thông tin sản phẩm
+│   ├── Khachhang.java     # Class quản lý thông tin khách hàng
+│   ├── Hoadon.java        # Class quản lý thông tin hóa đơn
+│   └── Sanphamtest.java   # Class kiểm thử cho Sanpham
+├── test/                  # Thư mục chứa các test case
+├── build/                 # Thư mục chứa các file biên dịch
+├── nbproject/            # Cấu hình NetBeans
+├── build.xml             # File cấu hình Ant build
+└── manifest.mf           # File manifest cho JAR
+```
 
 ## Chức năng chính
 1. **Quản lý Sản phẩm**
@@ -78,6 +58,64 @@
 - Java
 - JUnit (cho kiểm thử)
 - Ant (cho build)
+## Nội dung 01: Xây dựng ứng dụng với yêu cầu:
+Giao diện Java Spring Boot:
+Ứng dụng có thể được xây dựng trên nền tảng Java Spring Boot, với các tính năng quản lý sản phẩm, khách hàng, và hóa đơn. Các yêu cầu chi tiết gồm:
+
+## Quản lý sản phẩm:
+
+Thêm, sửa, xóa thông tin sản phẩm.
+
+Liệt kê danh sách sản phẩm và có thể lọc theo các tiêu chí như tên sản phẩm, loại sản phẩm, giá tiền.
+
+## Quản lý khách hàng:
+
+Thêm, sửa, xóa thông tin khách hàng.
+
+Liệt kê danh sách khách hàng và có thể tìm kiếm theo các tiêu chí như tên khách hàng, địa chỉ, điện thoại.
+
+## Quản lý hóa đơn:
+
+Tạo hóa đơn mới cho các khách hàng đã có.
+
+Liệt kê các hóa đơn đã tạo và có thể tìm kiếm theo các tiêu chí như ngày hóa đơn, số hóa đơn, khách hàng.
+
+## Chức năng liên kết giữa các đối tượng:
+
+Gán sản phẩm cho hóa đơn (sản phẩm có thể được thêm vào hóa đơn khi bán).
+
+Dữ liệu sẽ được lưu trữ dưới dạng file nhị phân (ví dụ: sử dụng ObjectOutputStream hoặc Serializable để lưu trữ đối tượng).
+
+## Lưu trữ dữ liệu trong bộ nhớ:
+
+Dữ liệu sẽ được lưu trong các Collection (ArrayList, LinkedList, Map, v.v.) để quản lý các đối tượng.
+
+Cập nhật và kiểm thử để đảm bảo rằng dữ liệu được lưu trữ đúng và dễ dàng xử lý.
+
+## Các lớp liên quan:
+SanPham: Quản lý thông tin sản phẩm (ID, tên, loại, giá, số lượng).
+
+KhachHang: Quản lý thông tin khách hàng (ID, tên, địa chỉ, điện thoại).
+
+HoaDon: Quản lý thông tin hóa đơn (ID hóa đơn, danh sách sản phẩm, ngày tạo, khách hàng).
+
+## Công nghệ sử dụng:
+Spring Boot: Phát triển ứng dụng web với các API RESTful cho việc quản lý.
+
+JPA/Hibernate: Quản lý cơ sở dữ liệu (nếu ứng dụng sử dụng cơ sở dữ liệu SQL).
+
+File lưu trữ dữ liệu: Lưu trữ dữ liệu trong file nhị phân khi người dùng muốn lưu trạng thái của hệ thống.
+
+JUnit: Kiểm thử ứng dụng (kiểm thử đơn vị cho các lớp quản lý sản phẩm, khách hàng, và hóa đơn).
+
+## Các bước thực hiện:
+Xây dựng các lớp đối tượng: Tạo các class SanPham, KhachHang, HoaDon.
+
+Xây dựng các lớp dịch vụ: Viết các dịch vụ cho việc thêm, sửa, xóa và liệt kê thông tin.
+
+Xây dựng các controller: Xây dựng API cho các chức năng qua Spring Boot.
+
+Cập nhật tài liệu và kiểm thử: Viết tài liệu hướng dẫn sử dụng và thực hiện các bài kiểm thử.
 
 ## Liên hệ
 Nếu có thắc mắc hoặc góp ý, vui lòng liên hệ:
