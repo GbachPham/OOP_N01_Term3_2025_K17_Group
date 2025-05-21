@@ -14,7 +14,7 @@
 │   │   ├── Sanpham.java       
 │   │   ├── Khachhang.java     
 │   │   ├── Hoadon.java        
-│   │   └── DataManager.java   # Đọc/ghi file nhị phân
+│   │   └── DataManager.java   
 │   ├── controller/           
 │   │   ├── SanphamController.java
 │   │   ├── KhachhangController.java
@@ -23,12 +23,12 @@
 │   │   ├── SanphamService.java
 │   │   ├── KhachhangService.java
 │   │   └── HoadonService.java
-│   └── Application.java       # Spring Boot main class
+│   └── Application.java       
 ├── resources/
 │   └── application.properties
-├── binary/                   # Dữ liệu nhị phân
+├── binary/                  
 │   └── data.dat
-├── diagrams/                 # Sơ đồ UML
+├── diagrams/                
 │   ├── class_diagram.png
 │   ├── sequence_diagram_1.png
 │   ├── sequence_diagram_2.png
