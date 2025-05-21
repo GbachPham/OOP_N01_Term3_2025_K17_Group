@@ -116,6 +116,8 @@ Xây dựng các lớp dịch vụ: Viết các dịch vụ cho việc thêm, s�
 Xây dựng các controller: Xây dựng API cho các chức năng qua Spring Boot.
 
 Cập nhật tài liệu và kiểm thử: Viết tài liệu hướng dẫn sử dụng và thực hiện các bài kiểm thử.
+Nội dung 3 
+https://drive.google.com/drive/folders/16AszyIfwY9w7SGOBOKqGMg_51zVb8xwS?usp=sharing
 
 ## Liên hệ
 Nếu có thắc mắc hoặc góp ý, vui lòng liên hệ:
