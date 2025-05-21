@@ -9,16 +9,36 @@
 - **Phùng Thị Hạ Lam**: Kiểm thử
 
 ## Cấu trúc dự án
-├── src/                    # Thư mục chứa mã nguồn
-│   ├── Sanpham.java       # Class quản lý thông tin sản phẩm
-│   ├── Khachhang.java     # Class quản lý thông tin khách hàng
-│   ├── Hoadon.java        # Class quản lý thông tin hóa đơn
-│   └── Sanphamtest.java   # Class kiểm thử cho Sanpham
-├── test/                  # Thư mục chứa các test case
-├── build/                 # Thư mục chứa các file biên dịch
-├── nbproject/            # Cấu hình NetBeans
-├── build.xml             # File cấu hình Ant build
-└── manifest.mf           # File manifest cho JAR
+├── src/                    
+│   ├── model/
+│   │   ├── Sanpham.java       
+│   │   ├── Khachhang.java     
+│   │   ├── Hoadon.java        
+│   │   └── DataManager.java   # Đọc/ghi file nhị phân
+│   ├── controller/           
+│   │   ├── SanphamController.java
+│   │   ├── KhachhangController.java
+│   │   └── HoadonController.java
+│   ├── service/
+│   │   ├── SanphamService.java
+│   │   ├── KhachhangService.java
+│   │   └── HoadonService.java
+│   └── Application.java       # Spring Boot main class
+├── resources/
+│   └── application.properties
+├── binary/                   # Dữ liệu nhị phân
+│   └── data.dat
+├── diagrams/                 # Sơ đồ UML
+│   ├── class_diagram.png
+│   ├── sequence_diagram_1.png
+│   ├── sequence_diagram_2.png
+│   └── activity_diagram.png
+├── test/                    
+│   └── SanphamTest.java
+├── build/
+├── build.xml
+└── manifest.mf
+
 
 
 ## Chức năng chính
