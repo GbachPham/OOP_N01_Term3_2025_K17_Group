@@ -9,12 +9,13 @@
 - **Phùng Thị Hạ Lam**: Kiểm thử
 
 ## Cấu trúc dự án
+```text
 ├── src/                    
 │   ├── model/
 │   │   ├── Sanpham.java       
 │   │   ├── Khachhang.java     
 │   │   ├── Hoadon.java        
-│   │   └── DataManager.java   
+│   │   └── DataManager.java
 │   ├── controller/           
 │   │   ├── SanphamController.java
 │   │   ├── KhachhangController.java
@@ -23,17 +24,17 @@
 │   │   ├── SanphamService.java
 │   │   ├── KhachhangService.java
 │   │   └── HoadonService.java
-│   └── Application.java       
+│   └── Application.java
 ├── resources/
 │   └── application.properties
-├── binary/                  
+├── binary/
 │   └── data.dat
-├── diagrams/                
+├── diagrams/
 │   ├── class_diagram.png
 │   ├── sequence_diagram_1.png
 │   ├── sequence_diagram_2.png
 │   └── activity_diagram.png
-├── test/                    
+├── test/
 │   └── SanphamTest.java
 ├── build/
 ├── build.xml
