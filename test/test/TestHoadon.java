@@ -1,0 +1,13 @@
+
+
+public class TestHoadon {
+    public static void main(String[] args) {
+        System.out.println("Hoa Don: ");
+        System.out.println("Hoa Don 1");
+        System.out.println("Hoa Don 2");
+        System.out.println("Hoa Don 3");
+        System.out.println("Hoa Don 4");
+        System.out.println("Hoa Don 5");
+        System.out.println("Hoa Don 6");
+    }
+}
