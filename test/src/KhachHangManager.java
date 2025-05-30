@@ -25,12 +25,16 @@ public class KhachHangManager {
 
     // Update
     public boolean capNhatKhachHang(String maKH, String tenMoi, String diaChiMoi, String sdtMoi) {
-        KhachHang kh = timKhachHangTheoMa(maKH);
-        if (kh != null) {
-            kh.setTenKhachHang(tenMoi);
-            kh.setDiaChi(diaChiMoi);
-            kh.setSoDienThoai(sdtMoi);
-            return true;
+        try {
+            KhachHang kh = timKhachHangTheoMa(maKH);
+            if (kh != null) {
+                kh.setTenKhachHang(tenMoi);
+                kh.setDiaChi(diaChiMoi);
+                kh.setSoDienThoai(sdtMoi);
+                return true;
+            }
+        } catch (Exception e) {
+            System.out.println("Lỗi cập nhật khách hàng: " + e.getMessage());
         }
         return false;
     }
@@ -43,5 +47,18 @@ public class KhachHangManager {
             return true;
         }
         return false;
+    }
+    // Phương thức liệt kê khách hàng theo địa chỉ
+    public void lietKeKhachHangTheoDiaChi(String diaChi) {
+        try {
+            System.out.println("Danh sách khách hàng ở địa chỉ: " + diaChi);
+            for (KhachHang kh : danhSachKhachHang) {
+                if (kh.getDiaChi().equalsIgnoreCase(diaChi)) {
+                    System.out.println(kh);
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("Lỗi liệt kê khách hàng theo địa chỉ: " + e.getMessage());
+        }
     }
 }
