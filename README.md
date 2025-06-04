@@ -8,18 +8,7 @@
 - **Phạm Gia Bách**: Lập trình viên
 - **Phùng Thị Hạ Lam**: Kiểm thử
 
-## Cấu trúc dự án
-```
-├── src/                    # Thư mục chứa mã nguồn
-│   ├── Sanpham.java       # Class quản lý thông tin sản phẩm
-│   ├── Khachhang.java     # Class quản lý thông tin khách hàng
-│   ├── Hoadon.java        # Class quản lý thông tin hóa đơn
-│   └── Sanphamtest.java   # Class kiểm thử cho Sanpham
-├── test/                  # Thư mục chứa các test case
-├── build/                 # Thư mục chứa các file biên dịch
-├── nbproject/            # Cấu hình NetBeans
-├── build.xml             # File cấu hình Ant build
-└── manifest.mf           # File manifest cho JAR
+
 ```
 
 ## Chức năng chính
