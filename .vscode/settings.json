@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
+        "test/test",
         "test/src",
-        "test/test"
+        "test/review"
     ]
 }
