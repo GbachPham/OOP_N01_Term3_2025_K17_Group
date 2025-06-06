@@ -120,8 +120,25 @@ Cập nhật tài liệu và kiểm thử: Viết tài liệu hướng dẫn s�
 https://drive.google.com/file/d/1fVUrKdy0wAAp2NzcNmFW9QYr8DmlI_G_/view
 ## Nội dung 3 
 https://drive.google.com/drive/folders/16AszyIfwY9w7SGOBOKqGMg_51zVb8xwS?usp=sharing
+### Chức năng chính: Tạo và lưu hóa đơn khi khách mua hàng
+
+#### Mô tả:
+Chức năng này cho phép nhân viên thu ngân tạo hóa đơn khi khách thanh toán, lưu thông tin vào hệ thống và in ra.
+
+#### Phân tích chức năng:
+- Nhập thông tin khách hàng
+- Nhập danh sách sản phẩm
+- Tính tổng tiền + thuế + giảm giá
+- Lưu hóa đơn
+- In hoặc hiển thị hóa đơn
+
+#### Phân công công việc:
+- Lữ Trung Anh: Nhập thông tin khách hàng và sản phẩm
+- Phạm Gia Bách: Tính tổng tiền, thuế, giảm giá
+- Phùng Thị Hạ Lam: Lưu và in hóa đơn
+- Cả nhóm: Gọi tất cả các phần tạo thành hàm `main()`
 
 ## Liên hệ
 Nếu có thắc mắc hoặc góp ý, vui lòng liên hệ:
-- Email: 23010661@st.phenikaa-uni.edu.vn
+- Email: 23010339@st.phenikaa-uni.edu.vn 
 - GitHub: https://github.com/GbachPham/OOP_N01_Term3_2025_K17_Group
