@@ -1,9 +1,7 @@
 
 ===== HÓA ĐƠN =====
-Khách hàng: Đỗ Tùng Lâm
-SĐT: 0987654321
+Khách hàng: Phùng thị Hạ Lam
+SĐT: 0123456789
 Danh sách sản phẩm:
-- Ao: 1 x 800000 VND
-- Giay: 1 x 1000000 VND
-- Quan: 1 x 700000 VND
-Tổng tiền thanh toán: 2612500 VND
+- Son: 1 x 1000000 VND
+Tổng tiền thanh toán: 1045000 VND
