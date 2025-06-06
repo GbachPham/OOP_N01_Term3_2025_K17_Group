@@ -1,17 +1,17 @@
 public class TestHoaDonManager {
     public static void main(String[] args) {
         try {
-            HoadonManager manager = new HoadonManager();
+            HoaDonManager manager = new HoaDonManager();
 
             // Test Create
-            Hoadon hd1 = new Hoadon("HD01", "2024-05-30", 100000);
-            Hoadon hd2 = new Hoadon("HD02", "2024-06-01", 200000);
+            HoaDon hd1 = new HoaDon("HD01", "2024-05-30", 100000);
+            HoaDon hd2 = new HoaDon("HD02", "2024-06-01", 200000);
             manager.themHoaDon(hd1);
             manager.themHoaDon(hd2);
 
             // Test Read
             System.out.println("Danh sách hóa đơn:");
-            for (Hoadon hd : manager.layTatCaHoaDon()) {
+            for (HoaDon hd : manager.layTatCaHoaDon()) {
                 System.out.println(hd);
             }
 
@@ -24,7 +24,7 @@ public class TestHoaDonManager {
             boolean deleted = manager.xoaHoaDon("HD02");
             System.out.println("\nXóa hóa đơn HD02: " + (deleted ? "Thành công" : "Thất bại"));
             System.out.println("Danh sách hóa đơn sau khi xóa:");
-            for (Hoadon hd : manager.layTatCaHoaDon()) {
+            for (HoaDon hd : manager.layTatCaHoaDon()) {
                 System.out.println(hd);
             }
         } catch (Exception e) {
