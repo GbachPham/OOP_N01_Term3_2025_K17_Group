@@ -137,7 +137,11 @@ Chức năng này cho phép nhân viên thu ngân tạo hóa đơn khi khách th
 - Phạm Gia Bách: Tính tổng tiền, thuế, giảm giá
 - Phùng Thị Hạ Lam: Lưu và in hóa đơn
 - Cả nhóm: Gọi tất cả các phần tạo thành hàm `main()`
-
+- Lữ Trung Anh
+tên phương thức 
+nhapThontinkhachhangvasanpham()
+mục đích 
+phương thức này cho phép người dùng nhập vào thông tin khách hàng tên số điện thoại và danh sách sản phẩm khách mua ( tên sản phẩm đối tượng đơn giá) kết quả trả về là một đối tượng HoaDon chứa thông tin khách hàng và danh sách sản phẩm 
 ## Liên hệ
 Nếu có thắc mắc hoặc góp ý, vui lòng liên hệ:
 - Email: 23010339@st.phenikaa-uni.edu.vn 
