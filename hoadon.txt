@@ -1,9 +1,18 @@
 
 ===== HÓA ĐƠN =====
-Khách hàng: Đỗ Tùng Lâm
-SĐT: 0987654321
+Khách hàng: a
+SĐT: 123456
 Danh sách sản phẩm:
-- Ao: 1 x 800000 VND
-- Giay: 1 x 1000000 VND
-- Quan: 1 x 700000 VND
-Tổng tiền thanh toán: 2612500 VND
+- 122: 1 x 56 VND
+- 465: 466 x 6666 VND
+- 222: 442 x 45 VND
+- 78: 8 x 979 VND
+- 56: 263 x 23 VND
+- 232: 3232 x 3232 VND
+- 232: 3232 x 32 VND
+- 2: 32 x 232 VND
+- 2: 2 x 32 VND
+- 32: 32 x 32 VND
+- 32: 32 x 32 VND
+- 32: 32 x 32 VND
+Tổng tiền thanh toán: 14316491 VND

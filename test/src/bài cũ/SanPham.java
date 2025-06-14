@@ -1,32 +1,23 @@
 public class SanPham {
-    private String maSanPham;
-    private String tenSanPham;
+    private String ma;
+    private String ten;
     private double gia;
     private int soLuong;
 
-    public SanPham(String maSanPham, String tenSanPham, double gia, int soLuong) {
-        this.maSanPham = maSanPham;
-        this.tenSanPham = tenSanPham;
+    public SanPham(String ma, String ten, double gia, int soLuong) {
+        this.ma = ma;
+        this.ten = ten;
         this.gia = gia;
         this.soLuong = soLuong;
     }
 
-    public String getMaSanPham() { return maSanPham; }
-    public void setMaSanPham(String maSanPham) { this.maSanPham = maSanPham; }
-    public String getTenSanPham() { return tenSanPham; }
-    public void setTenSanPham(String tenSanPham) { this.tenSanPham = tenSanPham; }
-    public double getGia() { return gia; }
+    public void setTen(String ten) { this.ten = ten; }
     public void setGia(double gia) { this.gia = gia; }
-    public int getSoLuong() { return soLuong; }
     public void setSoLuong(int soLuong) { this.soLuong = soLuong; }
+    public String getMa() { return ma; }
 
     @Override
     public String toString() {
-        return "SanPham{" +
-                "maSanPham='" + maSanPham + '\'' +
-                ", tenSanPham='" + tenSanPham + '\'' +
-                ", gia=" + gia +
-                ", soLuong=" + soLuong +
-                '}';
+        return ma + " - " + ten + " - " + gia + " - " + soLuong;
     }
 }
