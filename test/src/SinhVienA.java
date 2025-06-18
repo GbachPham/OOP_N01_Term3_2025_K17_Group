@@ -16,8 +16,15 @@ class SanPham {
 
     @Override
     public String toString() {
-        NumberFormat currencyVN = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
-        return tenSanPham + ": " + soLuong + " x " + currencyVN.format(donGia);
+        try {
+            NumberFormat currencyVN = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
+            return tenSanPham + ": " + soLuong + " x " + currencyVN.format(donGia);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "Lỗi khi hiển thị sản phẩm";
+        } finally {
+            // Không có tài nguyên cần đóng ở đây
+        }
     }
 }
 
@@ -34,8 +41,14 @@ class HoaDon {
 
     public double tinhTongTien() {
         double tong = 0;
-        for (SanPham sp : danhSachSanPham) {
-            tong += sp.soLuong * sp.donGia;
+        try {
+            for (SanPham sp : danhSachSanPham) {
+                tong += sp.soLuong * sp.donGia;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            // Không có tài nguyên cần đóng ở đây
         }
         return tong;
     }
@@ -43,14 +56,21 @@ class HoaDon {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        NumberFormat currencyVN = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
-        sb.append("Khách hàng: ").append(tenKhachHang).append("\n");
-        sb.append("SĐT: ").append(soDienThoai).append("\n");
-        sb.append("Danh sách sản phẩm:\n");
-        for (SanPham sp : danhSachSanPham) {
-            sb.append("- ").append(sp).append("\n");
+        try {
+            NumberFormat currencyVN = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
+            sb.append("Khách hàng: ").append(tenKhachHang).append("\n");
+            sb.append("SĐT: ").append(soDienThoai).append("\n");
+            sb.append("Danh sách sản phẩm:\n");
+            for (SanPham sp : danhSachSanPham) {
+                sb.append("- ").append(sp).append("\n");
+            }
+            sb.append("Tổng tiền: ").append(currencyVN.format(tinhTongTien())).append("\n");
+        } catch (Exception e) {
+            e.printStackTrace();
+            sb.append("Lỗi khi hiển thị hóa đơn.\n");
+        } finally {
+            // Không có tài nguyên cần đóng ở đây
         }
-        sb.append("Tổng tiền: ").append(currencyVN.format(tinhTongTien())).append("\n");
         return sb.toString();
     }
 }
@@ -58,69 +78,93 @@ class HoaDon {
 public class SinhVienA {
 
     public static HoaDon nhapThongTinKhachHangVaSanPham() {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = null;
+        HoaDon hoaDon = null;
 
-        System.out.print("Nhập tên khách hàng: ");
-        String tenKhachHang = scanner.nextLine();
+        try {
+            scanner = new Scanner(System.in);
 
-        System.out.print("Nhập số điện thoại: ");
-        String soDienThoai = scanner.nextLine();
+            System.out.print("Nhập tên khách hàng: ");
+            String tenKhachHang = scanner.nextLine();
 
-        ArrayList<SanPham> danhSachSanPham = new ArrayList<>();
-        int n = 0;
+            System.out.print("Nhập số điện thoại: ");
+            String soDienThoai = scanner.nextLine();
 
-        while (true) {
-            try {
-                System.out.print("Nhập số lượng sản phẩm: ");
-                n = Integer.parseInt(scanner.nextLine());
-                if (n <= 0) throw new NumberFormatException();
-                break;
-            } catch (NumberFormatException e) {
-                System.out.println("Vui lòng nhập một số nguyên dương!");
-            }
-        }
+            ArrayList<SanPham> danhSachSanPham = new ArrayList<>();
+            int n = 0;
 
-        for (int i = 0; i < n; i++) {
-            System.out.println("Sản phẩm #" + (i + 1));
-
-            System.out.print("Tên sản phẩm: ");
-            String ten = scanner.nextLine();
-
-            int soLuong;
             while (true) {
                 try {
-                    System.out.print("Số lượng: ");
-                    soLuong = Integer.parseInt(scanner.nextLine());
-                    if (soLuong <= 0) throw new NumberFormatException();
+                    System.out.print("Nhập số lượng sản phẩm: ");
+                    n = Integer.parseInt(scanner.nextLine());
+                    if (n <= 0) throw new NumberFormatException();
                     break;
                 } catch (NumberFormatException e) {
-                    System.out.println("Vui lòng nhập số lượng hợp lệ (nguyên dương)!");
+                    System.out.println("Vui lòng nhập một số nguyên dương!");
                 }
             }
 
-            double donGia;
-            while (true) {
-                try {
-                    System.out.print("Đơn giá: ");
-                    donGia = Double.parseDouble(scanner.nextLine());
-                    if (donGia < 0) throw new NumberFormatException();
-                    break;
-                } catch (NumberFormatException e) {
-                    System.out.println("Vui lòng nhập đơn giá hợp lệ (số thực dương)!");
+            for (int i = 0; i < n; i++) {
+                System.out.println("Sản phẩm #" + (i + 1));
+
+                System.out.print("Tên sản phẩm: ");
+                String ten = scanner.nextLine();
+
+                int soLuong;
+                while (true) {
+                    try {
+                        System.out.print("Số lượng: ");
+                        soLuong = Integer.parseInt(scanner.nextLine());
+                        if (soLuong <= 0) throw new NumberFormatException();
+                        break;
+                    } catch (NumberFormatException e) {
+                        System.out.println("Vui lòng nhập số lượng hợp lệ (nguyên dương)!");
+                    }
                 }
+
+                double donGia;
+                while (true) {
+                    try {
+                        System.out.print("Đơn giá: ");
+                        donGia = Double.parseDouble(scanner.nextLine());
+                        if (donGia < 0) throw new NumberFormatException();
+                        break;
+                    } catch (NumberFormatException e) {
+                        System.out.println("Vui lòng nhập đơn giá hợp lệ (số thực dương)!");
+                    }
+                }
+
+                danhSachSanPham.add(new SanPham(ten, soLuong, donGia));
             }
 
-            danhSachSanPham.add(new SanPham(ten, soLuong, donGia));
+            hoaDon = new HoaDon(tenKhachHang, soDienThoai, danhSachSanPham);
+        } catch (Exception e) {
+            System.out.println("Đã xảy ra lỗi trong quá trình nhập thông tin!");
+            e.printStackTrace();
+        } finally {
+            if (scanner != null) {
+                scanner.close();
+            }
         }
 
-        scanner.close();
-        return new HoaDon(tenKhachHang, soDienThoai, danhSachSanPham);
+        return hoaDon;
     }
 
     public static void main(String[] args) {
-        HoaDon hoaDon = nhapThongTinKhachHangVaSanPham();
+        try {
+            HoaDon hoaDon = nhapThongTinKhachHangVaSanPham();
 
-        System.out.println("\n--- Thông tin hóa đơn ---");
-        System.out.println(hoaDon);
+            System.out.println("\n--- Thông tin hóa đơn ---");
+            if (hoaDon != null) {
+                System.out.println(hoaDon);
+            } else {
+                System.out.println("Không thể hiển thị hóa đơn vì có lỗi xảy ra.");
+            }
+        } catch (Exception e) {
+            System.out.println("Lỗi xảy ra trong quá trình chạy chương trình.");
+            e.printStackTrace();
+        } finally {
+            System.out.println("Chương trình đã kết thúc.");
+        }
     }
 }
