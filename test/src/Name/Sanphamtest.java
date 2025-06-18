@@ -1,3 +1,5 @@
+package Name;
+
 public class Sanphamtest {
     public static void main(String[] args) {
         // Tạo một đối tượng SanPham để kiểm tra
@@ -13,8 +15,8 @@ public class Sanphamtest {
         KhachHang kh = new KhachHang("KH001", "Nguyen Van A", "123 Đường Láng, Hà Nội", "0901234567");
         System.out.println("Test KhachHang: " + kh.toString());
 
-        // Tạo một đối tượng Hoadon để kiểm tra
-        Hoadon hd = new Hoadon("HD001", "2025-05-11", 16000000);
-        System.out.println("Test Hoadon: " + hd.toString());
+        // Tạo một đối tượng HoaDon để kiểm tra
+        HoaDon hd = new HoaDon("HD001", "2025-05-11", 16000000);
+        System.out.println("Test HoaDon: " + hd.toString());
     }
 }

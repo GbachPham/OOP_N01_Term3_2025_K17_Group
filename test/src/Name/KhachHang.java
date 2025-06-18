@@ -1,3 +1,4 @@
+package Name;
 public class KhachHang {
     private String maKhachHang;
     private String tenKhachHang;

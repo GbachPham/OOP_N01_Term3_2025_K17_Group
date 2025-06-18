@@ -1,12 +1,22 @@
 public class App {
-    public static void main(String[] args) throws Exception {
-        // A nhập thông tin
-        HoaDon hoaDon = SinhVienA.nhapThongTinKhachHangVaSanPham();
+    public static void main(String[] args) {
+        System.out.println("=== CHƯƠNG TRÌNH QUẢN LÝ HÓA ĐƠN ===");
 
-        // B tính toán
-        double tongTienPhaiTra = SinhVienB.tinhTongTien(hoaDon.danhSachSanPham);
+        try {
+            // A: Nhập thông tin khách hàng và sản phẩm
+            HoaDon hoaDon = SinhVienA.nhapThongTinKhachHangVaSanPham();
 
-        // C lưu và in hóa đơn
-        SinhVienC.luuVaInHoaDon(hoaDon, tongTienPhaiTra);
+            // B: Tính tổng tiền thanh toán
+            double tongTienPhaiTra = SinhVienB.tinhTongTien(hoaDon.danhSachSanPham);
+
+            // C: Lưu và in hóa đơn
+            SinhVienC.luuVaInHoaDon(hoaDon, tongTienPhaiTra);
+
+        } catch (Exception e) {
+            System.out.println("❌ Đã xảy ra lỗi: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+            System.out.println("=== Chương trình kết thúc. ===");
+        }
     }
 }

@@ -1,3 +1,4 @@
+package Name;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -6,15 +7,18 @@ public class SanPhamManager {
 
     // Create
     public void themSanPham(SanPham sp) {
-        danhSachSanPham.add(sp);
+        if (sp != null) {
+            danhSachSanPham.add(sp);
+        }
     }
 
     // Read
     public List<SanPham> layTatCaSanPham() {
-        return danhSachSanPham;
+        return new ArrayList<>(danhSachSanPham); // Trả về bản sao để tránh bị sửa ngoài ý muốn
     }
 
     public SanPham timSanPhamTheoMa(String maSP) {
+        if (maSP == null) return null;
         for (SanPham sp : danhSachSanPham) {
             if (sp.getMaSanPham().equals(maSP)) {
                 return sp;

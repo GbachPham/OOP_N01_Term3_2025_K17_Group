@@ -1,3 +1,6 @@
+import Name.KhachHangManager;
+import Name.KhachHang;
+
 public class TestKhachHangManager {
     public static void main(String[] args) {
         KhachHangManager manager = new KhachHangManager();

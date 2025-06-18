@@ -1,3 +1,6 @@
+import Name.SanPhamManager;
+import Name.SanPham;
+
 public class TestSanPhamManager {
     public static void main(String[] args) {
         // Khởi tạo đối tượng quản lý sản phẩm

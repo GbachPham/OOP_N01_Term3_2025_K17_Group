@@ -1,3 +1,6 @@
+import Name.HoaDon;
+import Name.HoaDonManager;
+
 public class TestHoaDonManager {
     public static void main(String[] args) {
         try {

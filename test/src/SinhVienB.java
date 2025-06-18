@@ -1,4 +1,6 @@
+import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class SinhVienB {
     /**
@@ -7,25 +9,24 @@ public class SinhVienB {
      * @return Tổng tiền cuối cùng sau khi áp dụng giảm giá và thuế
      */
     public static double tinhTongTien(ArrayList<SanPham> danhSachSanPham) {
-        double tong = 0;
+        NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
+        
+        double tongGoc = 0;
         for (SanPham sp : danhSachSanPham) {
-            tong += sp.soLuong * sp.donGia;
+            tongGoc += sp.soLuong * sp.donGia;
         }
 
-        // Áp dụng giảm giá nếu tổng > 500,000
-        double giamGia = (tong > 500000) ? tong * 0.05 : 0;
-
-        // Thuế VAT 10%
-        double thue = (tong - giamGia) * 0.10;
-
-        double tongSauGiamVaThue = tong - giamGia + thue;
+        double giamGia = (tongGoc > 500_000) ? tongGoc * 0.05 : 0;
+        double thueVAT = (tongGoc - giamGia) * 0.10;
+        double tongCuoiCung = tongGoc - giamGia + thueVAT;
 
         // In thông tin chi tiết
-        System.out.printf("Tổng tiền gốc: %.0f VND\n", tong);
-        System.out.printf("Giảm giá: %.0f VND\n", giamGia);
-        System.out.printf("Thuế VAT (10%%): %.0f VND\n", thue);
-        System.out.printf("Tổng phải trả: %.0f VND\n", tongSauGiamVaThue);
+        System.out.println("\n=== CHI TIẾT TÍNH TOÁN ===");
+        System.out.println("Tổng tiền gốc: " + currencyFormat.format(tongGoc));
+        System.out.println("Giảm giá (5% nếu > 500.000đ): " + currencyFormat.format(giamGia));
+        System.out.println("Thuế VAT (10%): " + currencyFormat.format(thueVAT));
+        System.out.println("=> Tổng tiền phải trả: " + currencyFormat.format(tongCuoiCung));
 
-        return tongSauGiamVaThue;
+        return tongCuoiCung;
     }
 }
