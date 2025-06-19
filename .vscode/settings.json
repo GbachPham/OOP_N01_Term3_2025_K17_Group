@@ -3,5 +3,6 @@
         "test/test",
         "test/src",
         "test/review"
-    ]
+    ],
+    "java.compile.nullAnalysis.mode": "automatic"
 }
