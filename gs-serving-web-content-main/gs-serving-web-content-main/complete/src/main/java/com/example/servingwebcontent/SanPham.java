@@ -1,3 +1,5 @@
+package com.example.servingwebcontent;
+
 public class SanPham {
     private String tenSanPham;
     private int soLuong;
