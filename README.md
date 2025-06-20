@@ -22,7 +22,7 @@
 └── manifest.mf           # File manifest cho JAR
 ```
 
-## Chức năng chính
+## Các chức năng
 1. **Quản lý Sản phẩm**
    - Thêm, sửa, xóa thông tin sản phẩm
    - Xem danh sách sản phẩm
@@ -37,6 +37,18 @@
    - Tạo hóa đơn mới
    - Xem danh sách hóa đơn
    - Tìm kiếm hóa đơn
+#### Phân tích chức năng:
+- Nhập thông tin khách hàng
+- Nhập danh sách sản phẩm
+- Tính tổng tiền + thuế + giảm giá
+- Lưu hóa đơn
+- In hoặc hiển thị hóa đơn
+
+#### Phân công công việc:
+- Lữ Trung Anh: Nhập thông tin khách hàng và sản phẩm
+- Phạm Gia Bách: Tính tổng tiền, thuế, giảm giá
+- Phùng Thị Hạ Lam: Lưu và in hóa đơn
+- Cả nhóm: Gọi tất cả các phần tạo thành hàm `main()`
 
 ## Tiến độ dự án
 - [x] Phân tích đối tượng (SanPham, KhachHang, HoaDon)
