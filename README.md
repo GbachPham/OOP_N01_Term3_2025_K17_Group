@@ -4,9 +4,9 @@
 Đây là đồ án lập trình hướng đối tượng với mục tiêu xây dựng hệ thống quản lý bán hàng. Hệ thống cho phép quản lý thông tin sản phẩm, khách hàng và hóa đơn.
 
 ## Thành viên nhóm
-- **Lữ Trung Anh**: Quản lý
-- **Phạm Gia Bách**: Lập trình viên
-- **Phùng Thị Hạ Lam**: Kiểm thử
+- **Lữ Trung Anh**
+- **Phạm Gia Bách**
+- **Phùng Thị Hạ Lam**
 
 ## Cấu trúc dự án
 ```
@@ -43,21 +43,21 @@
 - [x] Viết các class chính
 - [x] Viết class kiểm thử
 - [x] Cập nhật tài liệu
+      
+#### Phân tích chức năng:
+- Nhập thông tin khách hàng
+- Nhập danh sách sản phẩm
+- Tính tổng tiền + thuế + giảm giá
+- Lưu hóa đơn
+- In hoặc hiển thị hóa đơn
 
-## Yêu cầu hệ thống
-- Java Development Kit (JDK) 8 trở lên
-- NetBeans IDE (khuyến nghị)
+#### Phân công công việc:
+- Lữ Trung Anh: Nhập thông tin khách hàng và sản phẩm
+- Phạm Gia Bách: Tính tổng tiền, thuế, giảm giá
+- Phùng Thị Hạ Lam: Lưu và in hóa đơn
+- Cả nhóm: Gọi tất cả các phần tạo thành hàm `main()`
 
-## Hướng dẫn cài đặt và chạy
-1. Clone repository về máy local
-2. Mở project trong NetBeans IDE
-3. Build project bằng Ant (F11)
-4. Chạy project (F6)
 
-## Công nghệ sử dụng
-- Java
-- JUnit (cho kiểm thử)
-- Ant (cho build)
 ## Nội dung 01: Xây dựng ứng dụng với yêu cầu:
 Giao diện Java Spring Boot:
 Ứng dụng có thể được xây dựng trên nền tảng Java Spring Boot, với các tính năng quản lý sản phẩm, khách hàng, và hóa đơn. Các yêu cầu chi tiết gồm:
@@ -99,23 +99,8 @@ KhachHang: Quản lý thông tin khách hàng (ID, tên, địa chỉ, điện t
 
 HoaDon: Quản lý thông tin hóa đơn (ID hóa đơn, danh sách sản phẩm, ngày tạo, khách hàng).
 
-## Công nghệ sử dụng:
-Spring Boot: Phát triển ứng dụng web với các API RESTful cho việc quản lý.
+### Chức năng này cho phép nhân viên thu ngân tạo hóa đơn khi khách thanh toán, lưu thông tin vào hệ thống và in ra.
 
-JPA/Hibernate: Quản lý cơ sở dữ liệu (nếu ứng dụng sử dụng cơ sở dữ liệu SQL).
-
-File lưu trữ dữ liệu: Lưu trữ dữ liệu trong file nhị phân khi người dùng muốn lưu trạng thái của hệ thống.
-
-JUnit: Kiểm thử ứng dụng (kiểm thử đơn vị cho các lớp quản lý sản phẩm, khách hàng, và hóa đơn).
-
-## Các bước thực hiện:
-Xây dựng các lớp đối tượng: Tạo các class SanPham, KhachHang, HoaDon.
-
-Xây dựng các lớp dịch vụ: Viết các dịch vụ cho việc thêm, sửa, xóa và liệt kê thông tin.
-
-Xây dựng các controller: Xây dựng API cho các chức năng qua Spring Boot.
-
-Cập nhật tài liệu và kiểm thử: Viết tài liệu hướng dẫn sử dụng và thực hiện các bài kiểm thử.
 ## Nội dung 2
 https://drive.google.com/file/d/1fVUrKdy0wAAp2NzcNmFW9QYr8DmlI_G_/view
 ## Nội dung 3 
@@ -125,23 +110,6 @@ https://drive.google.com/drive/folders/16AszyIfwY9w7SGOBOKqGMg_51zVb8xwS?usp=sha
 #### Mô tả:
 Chức năng này cho phép nhân viên thu ngân tạo hóa đơn khi khách thanh toán, lưu thông tin vào hệ thống và in ra.
 
-#### Phân tích chức năng:
-- Nhập thông tin khách hàng
-- Nhập danh sách sản phẩm
-- Tính tổng tiền + thuế + giảm giá
-- Lưu hóa đơn
-- In hoặc hiển thị hóa đơn
-
-#### Phân công công việc:
-- Lữ Trung Anh: Nhập thông tin khách hàng và sản phẩm
-- Phạm Gia Bách: Tính tổng tiền, thuế, giảm giá
-- Phùng Thị Hạ Lam: Lưu và in hóa đơn
-- Cả nhóm: Gọi tất cả các phần tạo thành hàm `main()`
-- Lữ Trung Anh
-tên phương thức 
-nhapThontinkhachhangvasanpham()
-mục đích 
-phương thức này cho phép người dùng nhập vào thông tin khách hàng tên số điện thoại và danh sách sản phẩm khách mua ( tên sản phẩm đối tượng đơn giá) kết quả trả về là một đối tượng HoaDon chứa thông tin khách hàng và danh sách sản phẩm 
 ## Liên hệ
 Nếu có thắc mắc hoặc góp ý, vui lòng liên hệ:
 - Email: 23010339@st.phenikaa-uni.edu.vn 
