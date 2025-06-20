@@ -155,9 +155,11 @@ HoaDon: Quản lý thông tin hóa đơn (ID hóa đơn, danh sách sản phẩm
 ### Chức năng này cho phép nhân viên thu ngân tạo hóa đơn khi khách thanh toán, lưu thông tin vào hệ thống và in ra.
 
 ## Nội dung 2
-https://drive.google.com/file/d/1fVUrKdy0wAAp2NzcNmFW9QYr8DmlI_G_/view
+![Sơ đồ lớp quản lý bán hàng](images/sơ-đồ-Class-Diagram.jng)
 ## Nội dung 3 
-https://drive.google.com/drive/folders/16AszyIfwY9w7SGOBOKqGMg_51zVb8xwS?usp=sharing
+![Sơ đồ Behavioural Diagram ](Sơ-đồ-hoạt-động (Activity Diagram))
+![Sơ đồ Behavioural Diagram ](Sơ-đồ-tuần-tự (Sequence Diagram))
+
 
 
 ## Liên hệ
