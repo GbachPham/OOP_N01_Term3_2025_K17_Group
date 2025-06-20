@@ -157,9 +157,8 @@ HoaDon: Quản lý thông tin hóa đơn (ID hóa đơn, danh sách sản phẩm
 ## Nội dung 2
 ![Sơ đồ lớp quản lý bán hàng](sơ-đồ-Class-Diagram.jpg)
 ## Nội dung 3 
-![Sơ đồ Behavioural Diagram ](Sơ-đồ-hoạt-động(Activity Diagram).jpg)
-![Sơ đồ Behavioural Diagram ](Sơ-đồ-tuần-tự (Sequence Diagram).jpg)
-
+![Sơ đồ hoạt động](activity_diagram.jpg)
+![Sơ đồ tuần tự](sequence_diagram.jpg)
 
 
 ## Liên hệ
