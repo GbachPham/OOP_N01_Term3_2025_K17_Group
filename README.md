@@ -37,7 +37,7 @@
    - Tạo hóa đơn mới
    - Xem danh sách hóa đơn
    - Tìm kiếm hóa đơn
-#### Phân tích chức năng:
+#### Phân tích chức năng chính: 
 - Nhập thông tin khách hàng
 - Nhập danh sách sản phẩm
 - Tính tổng tiền + thuế + giảm giá
@@ -68,7 +68,48 @@
 - Phạm Gia Bách: Tính tổng tiền, thuế, giảm giá
 - Phùng Thị Hạ Lam: Lưu và in hóa đơn
 - Cả nhóm: Gọi tất cả các phần tạo thành hàm `main()`
+🧾 Phân công chức năng & Miêu tả phương thức
+👤 Lữ Trung Anh – Nhập thông tin khách hàng và sản phẩm
+Phương thức: nhapThongTinKhachHangVaSanPham()
 
+Chức năng: Nhập tên khách hàng, SĐT, danh sách sản phẩm (tên, số lượng, đơn giá).
+
+Trả về: Đối tượng HoaDon.
+
+👤 Phạm Gia Bách – Tính tổng tiền, giảm giá và thuế
+Phương thức: tinhTongTien(ArrayList<SanPham> danhSachSanPham)
+
+Chức năng:
+
+Tính tổng tiền gốc.
+
+Giảm 5% nếu > 500.000đ.
+
+Tính thuế VAT 10%.
+
+Trả về: Tổng tiền cuối cùng (double).
+
+👤 Phùng Thị Hạ Lam – Lưu và in hóa đơn
+Phương thức: luuVaInHoaDon(HoaDon hoaDon, double tongTienCuoiCung)
+
+Chức năng:
+
+In hóa đơn ra màn hình.
+
+Ghi hóa đơn vào file hoadon.txt.
+
+Trả về: Không (void).
+
+👥 Cả nhóm – Hàm main()
+Gọi lần lượt các chức năng:
+
+nhapThongTinKhachHangVaSanPham()
+
+tinhTongTien(...)
+
+luuVaInHoaDon(...)
+
+Điều phối toàn bộ chương trình quản lý bán hàng.
 
 ## Nội dung 01: Xây dựng ứng dụng với yêu cầu:
 Giao diện Java Spring Boot:
@@ -117,10 +158,7 @@ HoaDon: Quản lý thông tin hóa đơn (ID hóa đơn, danh sách sản phẩm
 https://drive.google.com/file/d/1fVUrKdy0wAAp2NzcNmFW9QYr8DmlI_G_/view
 ## Nội dung 3 
 https://drive.google.com/drive/folders/16AszyIfwY9w7SGOBOKqGMg_51zVb8xwS?usp=sharing
-### Chức năng chính: Tạo và lưu hóa đơn khi khách mua hàng
 
-#### Mô tả:
-Chức năng này cho phép nhân viên thu ngân tạo hóa đơn khi khách thanh toán, lưu thông tin vào hệ thống và in ra.
 
 ## Liên hệ
 Nếu có thắc mắc hoặc góp ý, vui lòng liên hệ:
