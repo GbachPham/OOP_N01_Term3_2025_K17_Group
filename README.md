@@ -22,7 +22,7 @@
 └── manifest.mf           # File manifest cho JAR
 ```
 
-## Các chức năng
+## Các đối tượng 
 1. **Quản lý Sản phẩm**
    - Thêm, sửa, xóa thông tin sản phẩm
    - Xem danh sách sản phẩm
@@ -56,12 +56,6 @@
 - [x] Viết class kiểm thử
 - [x] Cập nhật tài liệu
       
-#### Phân tích chức năng:
-- Nhập thông tin khách hàng
-- Nhập danh sách sản phẩm
-- Tính tổng tiền + thuế + giảm giá
-- Lưu hóa đơn
-- In hoặc hiển thị hóa đơn
 
 #### Phân công công việc:
 - Lữ Trung Anh: Nhập thông tin khách hàng và sản phẩm
