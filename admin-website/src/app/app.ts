@@ -1,0 +1,15 @@
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { Sidebar } from './layout/sidebar/sidebar';
+import { Header } from './layout/header/header';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet, Sidebar, Header],
+  templateUrl: './app.html',
+  styleUrl: './app.scss'
+})
+export class App {
+  protected title = 'admin-website';
+}
