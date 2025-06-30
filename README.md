@@ -1,198 +1,124 @@
-# Hệ Thống Quản Lý Bán Hàng
+Hệ Thống Thương Mại Điện Tử với Trang Quản Trị
+Dự án này là một hệ thống thương mại điện tử hoàn chỉnh, được phát triển theo kiến trúc microservices và phân chia công việc rõ ràng cho ba thành viên.
 
-## Mô tả đề tài
-Đây là đồ án lập trình hướng đối tượng với mục tiêu xây dựng hệ thống quản lý bán hàng. Hệ thống cho phép quản lý thông tin sản phẩm, khách hàng và hóa đơn.
+Kiến Trúc Hệ Thống
+Hệ thống được thiết kế theo kiến trúc microservices với sự tách biệt rõ ràng giữa frontend và backend.
 
-## Thành viên nhóm
-- **Lữ Trung Anh**
-- **Phạm Gia Bách**
-- **Phùng Thị Hạ Lam**
+Trang Quản Trị (thực hiện bởi Phạm Gia Bách): Sử dụng Angular Admin Dashboard.
 
-## Cấu trúc dự án
-```
-├── src/                    # Thư mục chứa mã nguồn
-│   ├── Sanpham.java       # Class quản lý thông tin sản phẩm
-│   ├── Khachhang.java     # Class quản lý thông tin khách hàng
-│   ├── Hoadon.java        # Class quản lý thông tin hóa đơn
-│   └── Sanphamtest.java   # Class kiểm thử cho Sanpham
-├── test/                  # Thư mục chứa các test case
-├── build/                 # Thư mục chứa các file biên dịch
-├── nbproject/            # Cấu hình NetBeans
-├── build.xml             # File cấu hình Ant build
-└── manifest.mf           # File manifest cho JAR
-```
+API Backend (thực hiện bởi Lữ Trung Anh): Được xây dựng bằng Java Spring Boot REST API kết nối với MongoDB.
 
-## Các đối tượng 
-1. **Quản lý Sản phẩm**
-   - Thêm, sửa, xóa thông tin sản phẩm
-   - Xem danh sách sản phẩm
-   - Tìm kiếm sản phẩm
+Giao Diện Người Dùng (thực hiện bởi Phùng Thị Hạ Lam): Là một HTML/CSS/JS frontend dành cho người dùng cuối.
 
-2. **Quản lý Khách hàng**
-   - Thêm, sửa, xóa thông tin khách hàng
-   - Xem danh sách khách hàng
-   - Tìm kiếm khách hàng
+Các Thành Phần
+1. Trang Quản Trị (/admin-website)
+Thực hiện bởi: Phạm Gia Bách
 
-3. **Quản lý Hóa đơn**
-   - Tạo hóa đơn mới
-   - Xem danh sách hóa đơn
-   - Tìm kiếm hóa đơn
-#### Phân tích chức năng chính: 
-- Nhập thông tin khách hàng
-- Nhập danh sách sản phẩm
-- Tính tổng tiền + thuế + giảm giá
-- Lưu hóa đơn
-- In hoặc hiển thị hóa đơn
+Trang quản trị là nơi quản lý toàn bộ hệ thống thương mại điện tử, với các tính năng chính sau:
 
-#### Phân công công việc:
-- Lữ Trung Anh: Nhập thông tin khách hàng và sản phẩm
-- Phạm Gia Bách: Tính tổng tiền, thuế, giảm giá
-- Phùng Thị Hạ Lam: Lưu và in hóa đơn
-- Cả nhóm: Gọi tất cả các phần tạo thành hàm `main()`
+Quản lý sản phẩm: Bao gồm tạo, đọc, cập nhật, xóa (CRUD), quản lý biến thể và thẻ sản phẩm.
 
-## Tiến độ dự án
-- [x] Phân tích đối tượng (SanPham, KhachHang, HoaDon)
-- [x] Viết các class chính
-- [x] Viết class kiểm thử
-- [x] Cập nhật tài liệu
-      
+Quản lý danh mục: Tạo, cập nhật, xóa danh mục sản phẩm.
 
-#### Phân công công việc:
-- Lữ Trung Anh: Nhập thông tin khách hàng và sản phẩm
-- Phạm Gia Bách: Tính tổng tiền, thuế, giảm giá
-- Phùng Thị Hạ Lam: Lưu và in hóa đơn
-- Cả nhóm: Gọi tất cả các phần tạo thành hàm `main()`
-🧾 Phân công chức năng & Miêu tả phương thức
-👤 Lữ Trung Anh – Nhập thông tin khách hàng và sản phẩm
-Phương thức: nhapThongTinKhachHangVaSanPham()
+Quản lý đơn hàng: Xem, cập nhật trạng thái đơn hàng.
 
-Chức năng: Nhập tên khách hàng, SĐT, danh sách sản phẩm (tên, số lượng, đơn giá).
+Quản lý mã giảm giá: Tạo, sửa, xóa các mã giảm giá.
 
-Trả về: Đối tượng HoaDon.
+Tải lên tệp: Hỗ trợ tải lên hình ảnh và các tệp khác.
 
-👤 Phạm Gia Bách – Tính tổng tiền, giảm giá và thuế
-Phương thức: tinhTongTien(ArrayList<SanPham> danhSachSanPham)
+Thống kê dashboard: Cung cấp cái nhìn tổng quan về hoạt động của hệ thống.
 
-Chức năng:
+Hỗ trợ khách hàng: Các chức năng liên quan đến việc hỗ trợ người dùng.
 
-Tính tổng tiền gốc.
+Công nghệ sử dụng:
 
-Giảm 5% nếu > 500.000đ.
+Angular 20.0.4
 
-Tính thuế VAT 10%.
+SCSS
 
-Trả về: Tổng tiền cuối cùng (double).
+Component-based architecture
 
-👤 Phùng Thị Hạ Lam – Lưu và in hóa đơn
-Phương thức: luuVaInHoaDon(HoaDon hoaDon, double tongTienCuoiCung)
-
-Chức năng:
-
-In hóa đơn ra màn hình.
-
-Ghi hóa đơn vào file hoadon.txt.
-
-Trả về: Không (void).
-
-👥 Cả nhóm – Hàm main()
-Gọi lần lượt các chức năng:
-
-nhapThongTinKhachHangVaSanPham()
-
-tinhTongTien(...)
-
-luuVaInHoaDon(...)
-
-Điều phối toàn bộ chương trình quản lý bán hàng.
-
-## Nội dung 01: Xây dựng ứng dụng với yêu cầu:
-Giao diện Java Spring Boot:
-Ứng dụng có thể được xây dựng trên nền tảng Java Spring Boot, với các tính năng quản lý sản phẩm, khách hàng, và hóa đơn. Các yêu cầu chi tiết gồm:
-
-## Quản lý sản phẩm:
-
-Thêm, sửa, xóa thông tin sản phẩm.
-
-Liệt kê danh sách sản phẩm và có thể lọc theo các tiêu chí như tên sản phẩm, loại sản phẩm, giá tiền.
-
-## Quản lý khách hàng:
-
-Thêm, sửa, xóa thông tin khách hàng.
-
-Liệt kê danh sách khách hàng và có thể tìm kiếm theo các tiêu chí như tên khách hàng, địa chỉ, điện thoại.
-
-## Quản lý hóa đơn:
-
-Tạo hóa đơn mới cho các khách hàng đã có.
-
-Liệt kê các hóa đơn đã tạo và có thể tìm kiếm theo các tiêu chí như ngày hóa đơn, số hóa đơn, khách hàng.
-
-## Chức năng liên kết giữa các đối tượng:
-
-Gán sản phẩm cho hóa đơn (sản phẩm có thể được thêm vào hóa đơn khi bán).
-
-Dữ liệu sẽ được lưu trữ dưới dạng file nhị phân (ví dụ: sử dụng ObjectOutputStream hoặc Serializable để lưu trữ đối tượng).
-
-## Lưu trữ dữ liệu trong bộ nhớ:
-
-Dữ liệu sẽ được lưu trong các Collection (ArrayList, LinkedList, Map, v.v.) để quản lý các đối tượng.
-
-Cập nhật và kiểm thử để đảm bảo rằng dữ liệu được lưu trữ đúng và dễ dàng xử lý.
-
-## Các lớp liên quan:
-SanPham: Quản lý thông tin sản phẩm (ID, tên, loại, giá, số lượng).
-
-KhachHang: Quản lý thông tin khách hàng (ID, tên, địa chỉ, điện thoại).
-
-HoaDon: Quản lý thông tin hóa đơn (ID hóa đơn, danh sách sản phẩm, ngày tạo, khách hàng).
-
-### Chức năng này cho phép nhân viên thu ngân tạo hóa đơn khi khách thanh toán, lưu thông tin vào hệ thống và in ra.
-
-## Nội dung 2
-![Sơ đồ lớp quản lý bán hàng](sơ-đồ-Class-Diagram.jpg)
-## Nội dung 3 
-![Sơ đồ hoạt động](activity_diagram.jpg)
-![Sơ đồ tuần tự](sequence_diagram.jpg)
-
-
-## Liên hệ
-Nếu có thắc mắc hoặc góp ý, vui lòng liên hệ:
-- Email: 23010339@st.phenikaa-uni.edu.vn 
-- GitHub: https://github.com/GbachPham/OOP_N01_Term3_2025_K17_Group
-
-
-# Admin Backend API with MongoDB
-
-## Mô tả
+2. API Backend (/backend-mongodb)
+Thực hiện bởi: Lữ Trung Anh
 
 Đây là backend API cho hệ thống quản lý admin được phát triển với Java Spring Boot và MongoDB. API hỗ trợ quản lý danh mục sản phẩm và sản phẩm với các tính năng:
 
-- **Quản lý danh mục**: CRUD operations cho danh mục sản phẩm
-- **Quản lý sản phẩm**: CRUD operations với hỗ trợ multiple categories, variants và tags
-- **Product Variants**: Quản lý các biến thể sản phẩm (màu sắc, kích thước, v.v.)
-- **Product Tags**: Hệ thống tag cho sản phẩm (giảm giá, hot, new, featured, v.v.)
-- **Tìm kiếm và lọc**: Hỗ trợ tìm kiếm và lọc dữ liệu
+RESTful endpoints: Cung cấp các API tuân thủ chuẩn REST.
 
-## Công nghệ sử dụng
+MongoDB persistence: Lưu trữ dữ liệu bằng MongoDB.
 
-- **Java 17**
-- **Spring Boot 3.2.0**
-- **Spring Data MongoDB**
-- **MongoDB** (Database)
-- **Maven** (Build tool)
-- **Boostrap 5**
+Tải lên file: Hỗ trợ xử lý các yêu cầu tải lên tệp.
 
-## Yêu cầu hệ thống
+CORS config: Cấu hình CORS để cho phép các ứng dụng frontend truy cập.
 
-- Java 17 hoặc cao hơn
-- Maven 3.6 hoặc cao hơn
-- MongoDB 4.4 hoặc cao hơn
+Xác thực & phân quyền: Đảm bảo an toàn thông tin và quyền truy cập.
 
-## Cài đặt và chạy
+Quản lý danh mục: CRUD operations cho danh mục sản phẩm.
 
-### 1. Cài đặt MongoDB
+Quản lý sản phẩm: CRUD operations với hỗ trợ multiple categories, variants và tags.
 
-```bash
+Product Variants: Quản lý các biến thể sản phẩm (màu sắc, kích thước, v.v.).
+
+Product Tags: Hệ thống tag cho sản phẩm (giảm giá, hot, new, featured, v.v.).
+
+Tìm kiếm và lọc: Hỗ trợ tìm kiếm và lọc dữ liệu.
+
+Công nghệ sử dụng:
+
+Java 17
+
+Spring Boot 3.2.0
+
+Spring Data MongoDB
+
+MongoDB (Database)
+
+Maven (Build tool)
+
+3. Giao Diện Người Dùng (/Web-user)
+Thực hiện bởi: Phùng Thị Hạ Lam
+
+Giao diện người dùng là phần mà khách hàng tương tác trực tiếp, được thiết kế thân thiện và tương thích với nhiều thiết bị.
+
+Tính năng:
+
+Tìm kiếm, duyệt sản phẩm: Khách hàng có thể dễ dàng tìm kiếm và xem các sản phẩm.
+
+Giỏ hàng: Chức năng thêm, bớt sản phẩm vào giỏ hàng.
+
+Đặt hàng: Quy trình đặt hàng trực tuyến.
+
+Responsive design: Đảm bảo giao diện hiển thị tốt trên cả máy tính và thiết bị di động.
+
+Công nghệ sử dụng:
+
+HTML5
+
+CSS3
+
+JavaScript
+
+Bắt Đầu
+Yêu Cầu Hệ Thống
+Để chạy hệ thống, cần cài đặt các phần mềm sau:
+
+Node.js và npm (cho Trang Quản Trị)
+
+Java 17+
+
+Maven 3.6+
+
+MongoDB 4.4+
+
+Trình duyệt hiện đại
+
+Cài Đặt và Chạy
+1. Cài đặt MongoDB
+
+Đảm bảo MongoDB đã được cài đặt trên hệ thống của bạn.
+
+Bash
+
 # Ubuntu/Debian
 sudo apt update
 sudo apt install mongodb
@@ -202,11 +128,12 @@ brew tap mongodb/brew
 brew install mongodb-community
 
 # Windows - tải và cài đặt từ trang chủ MongoDB
-```
+2. Khởi động MongoDB
 
-### 2. Khởi động MongoDB
+Sau khi cài đặt, hãy khởi động dịch vụ MongoDB.
 
-```bash
+Bash
+
 # Ubuntu/Debian/MacOS
 sudo systemctl start mongod
 # hoặc
@@ -214,28 +141,43 @@ mongod
 
 # Windows
 net start MongoDB
-```
+3. Cài đặt và chạy Backend API (Lữ Trung Anh)
 
-### 3. Clone và chạy project
+Bash
 
-```bash
-# Di chuyển vào thư mục project
 cd backend-mongodb
-
-# Build project
 mvn clean install
-
-# Chạy ứng dụng
 mvn spring-boot:run
-```
+API sẽ chạy tại: http://localhost:8081/api
 
-API sẽ chạy tại: `http://localhost:8081/api`
+4. Cài đặt Trang Quản Trị (Phạm Gia Bách)
 
-## Cấu hình
+Bash
 
-Cấu hình database trong file `src/main/resources/application.properties`:
+cd admin-website
+npm install
+ng serve
+Admin sẽ chạy tại: http://localhost:4200
 
-```properties
+5. Cài đặt Giao Diện Người Dùng (Phùng Thị Hạ Lam)
+
+Có thể mở file HTML trực tiếp trong trình duyệt hoặc sử dụng một server cục bộ:
+
+Bash
+
+python -m http.server 8000
+Scripts Phát Triển
+Các scripts sau được cung cấp để hỗ trợ chạy nhanh toàn bộ hệ thống:
+
+start-dev.bat (dành cho Windows)
+
+start-dev.sh (dành cho Linux/Mac)
+
+Cấu hình
+Cấu hình database cho Backend API trong file src/main/resources/application.properties:
+
+Properties
+
 # MongoDB Configuration
 spring.data.mongodb.uri=mongodb://localhost:27017/admin_db
 spring.data.mongodb.auto-index-creation=true
@@ -243,55 +185,151 @@ spring.data.mongodb.auto-index-creation=true
 # Server Configuration
 server.port=8081
 server.servlet.context-path=/api
-```
+API Endpoints
+Triển khai bởi: Lữ Trung Anh
 
-## API Endpoints
+Categories
+Method
 
-### Categories
+Endpoint
 
-| Method | Endpoint | Mô tả |
-|--------|----------|--------|
-| GET | `/categories` | Lấy tất cả danh mục (có hỗ trợ search và filter) |
-| GET | `/categories/active` | Lấy danh mục đang hoạt động |
-| GET | `/categories/{id}` | Lấy danh mục theo ID |
-| POST | `/categories` | Tạo danh mục mới |
-| PUT | `/categories/{id}` | Cập nhật danh mục |
-| DELETE | `/categories/{id}` | Xóa danh mục |
-| PATCH | `/categories/{id}/toggle-status` | Bật/tắt trạng thái danh mục |
+Mô tả
 
-**Query Parameters cho GET `/categories`:**
-- `search`: Tìm kiếm theo tên danh mục
-- `active`: Lọc theo trạng thái (true/false)
+GET
 
-### Products
+/categories
 
-| Method | Endpoint | Mô tả |
-|--------|----------|--------|
-| GET | `/products` | Lấy tất cả sản phẩm (có hỗ trợ search và filter) |
-| GET | `/products/active` | Lấy sản phẩm đang hoạt động |
-| GET | `/products/{id}` | Lấy sản phẩm theo ID |
-| POST | `/products` | Tạo sản phẩm mới |
-| PUT | `/products/{id}` | Cập nhật sản phẩm |
-| DELETE | `/products/{id}` | Xóa sản phẩm |
-| PATCH | `/products/{id}/toggle-status` | Bật/tắt trạng thái sản phẩm |
+Lấy tất cả danh mục (có hỗ trợ search và filter)
 
-**Query Parameters cho GET `/products`:**
-- `search`: Tìm kiếm theo tên sản phẩm
-- `categoryId`: Lọc theo danh mục
-- `active`: Lọc theo trạng thái (true/false)
+GET
 
-### Product Variants
+/categories/active
 
-| Method | Endpoint | Mô tả |
-|--------|----------|--------|
-| POST | `/products/{productId}/variants` | Thêm variant mới cho sản phẩm |
-| PUT | `/products/{productId}/variants/{variantId}` | Cập nhật variant |
-| DELETE | `/products/{productId}/variants/{variantId}` | Xóa variant |
+Lấy danh mục đang hoạt động
 
-## Data Models
+GET
 
-### Category
-```json
+/categories/{id}
+
+Lấy danh mục theo ID
+
+POST
+
+/categories
+
+Tạo danh mục mới
+
+PUT
+
+/categories/{id}
+
+Cập nhật danh mục
+
+DELETE
+
+/categories/{id}
+
+Xóa danh mục
+
+PATCH
+
+/categories/{id}/toggle-status
+
+Bật/tắt trạng thái danh mục
+
+Query Parameters cho GET /categories:
+
+search: Tìm kiếm theo tên danh mục
+
+active: Lọc theo trạng thái (true/false)
+
+Products
+Method
+
+Endpoint
+
+Mô tả
+
+GET
+
+/products
+
+Lấy tất cả sản phẩm (có hỗ trợ search và filter)
+
+GET
+
+/products/active
+
+Lấy sản phẩm đang hoạt động
+
+GET
+
+/products/{id}
+
+Lấy sản phẩm theo ID
+
+POST
+
+/products
+
+Tạo sản phẩm mới
+
+PUT
+
+/products/{id}
+
+Cập nhật sản phẩm
+
+DELETE
+
+/products/{id}
+
+Xóa sản phẩm
+
+PATCH
+
+/products/{id}/toggle-status
+
+Bật/tắt trạng thái sản phẩm
+
+Query Parameters cho GET /products:
+
+search: Tìm kiếm theo tên sản phẩm
+
+categoryId: Lọc theo danh mục
+
+active: Lọc theo trạng thái (true/false)
+
+Product Variants
+Method
+
+Endpoint
+
+Mô tả
+
+POST
+
+/products/{productId}/variants
+
+Thêm variant mới cho sản phẩm
+
+PUT
+
+/products/{productId}/variants/{variantId}
+
+Cập nhật variant
+
+DELETE
+
+/products/{productId}/variants/{variantId}
+
+Xóa variant
+
+Mô Hình Dữ liệu
+Thiết kế bởi: Lữ Trung Anh
+
+Category
+
 {
   "id": "string",
   "name": "string",
@@ -300,10 +338,8 @@ server.servlet.context-path=/api
   "createdAt": "datetime",
   "updatedAt": "datetime"
 }
-```
+Product
 
-### Product
-```json
 {
   "id": "string",
   "name": "string",
@@ -339,107 +375,50 @@ server.servlet.context-path=/api
   "createdAt": "datetime",
   "updatedAt": "datetime"
 }
-```
+Đơn Hàng
 
-## Features
+{
+  "id": "string",
+  "customer": {
+    "name": "string",
+    "email": "string",
+    "phone": "string"
+  },
+  "items": [...],
+  "status": "string",
+  "total": "number"
+}
+Tính năng nổi bật của Backend API
+Multiple Categories Support: Mỗi sản phẩm có thể thuộc về nhiều danh mục hoặc không thuộc danh mục nào. Trường categoryIds chứa một mảng các ID danh mục.
 
-### Multiple Categories Support
-- Mỗi sản phẩm có thể thuộc về nhiều danh mục hoặc không thuộc danh mục nào
-- Field `categoryIds` chứa array các ID danh mục
+Product Variants: Mỗi sản phẩm có thể có nhiều biến thể. Biến thể có thể có giá bổ sung, tồn kho riêng biệt và hỗ trợ các thuộc tính như màu sắc, kích thước, chất liệu, thông số kỹ thuật.
 
-### Product Variants
-- Mỗi sản phẩm có thể có nhiều biến thể
-- Biến thể có thể có giá bổ sung, tồn kho riêng biệt
-- Hỗ trợ các thuộc tính: màu sắc, kích thước, chất liệu, thông số kỹ thuật
+Product Tags: Hệ thống tag linh hoạt cho sản phẩm với các loại tag như discount, hot, new, bestseller, featured. Mỗi tag có thể có màu sắc và giá trị riêng.
 
-### Product Tags
-- Hệ thống tag linh hoạt cho sản phẩm
-- Các loại tag: `discount`, `hot`, `new`, `bestseller`, `featured`
-- Mỗi tag có thể có màu sắc và giá trị riêng
+Data Initialization: API được cấu hình để tự động khởi tạo 5 danh mục mẫu và 1 sản phẩm mẫu với variants và tags khi chạy lần đầu.
 
-### Data Initialization
-- Tự động khởi tạo dữ liệu mẫu khi chạy lần đầu
-- 5 danh mục mẫu và 1 sản phẩm mẫu với variants và tags
+CORS Configuration: API đã được cấu hình CORS để kết nối với frontend Angular tại http://localhost:4200, đảm bảo tương tác liền mạch giữa các thành phần.
 
-## CORS Configuration
-API đã được cấu hình CORS để kết nối với frontend Angular tại `http://localhost:4200`
+Khắc phục sự cố (Troubleshooting)
+Lỗi kết nối MongoDB:
 
-## Troubleshooting
+Kiểm tra xem MongoDB đã được khởi động chưa.
 
-### MongoDB Connection Error
-- Kiểm tra MongoDB đã được khởi động chưa
-- Kiểm tra connection string trong `application.properties`
-- Đảm bảo database name `admin_db` có quyền truy cập
+Xác minh chuỗi kết nối trong application.properties.
 
-### Port Conflict
-- Mặc định API chạy tại port 8081
-- Thay đổi port trong `application.properties` nếu cần:
-```properties
+Đảm bảo cơ sở dữ liệu admin_db có quyền truy cập.
+
+Xung đột cổng (Port Conflict):
+
+Mặc định API chạy tại cổng 8081.
+
+Nếu cần, hãy thay đổi cổng trong application.properties:
+
+Properties
+
 server.port=8082
-```
+Các vấn đề về CORS:
 
-### CORS Issues
-- Kiểm tra frontend đang chạy tại đúng port 4200
-- Cập nhật CORS configuration trong `CorsConfig.java` nếu cần 
+Kiểm tra xem frontend có đang chạy tại đúng cổng 4200 hay không.
 
-
-
-# AdminWebsite
-
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.4.
-
-## Development server
-
-To start a local development server, run:
-
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Nếu cần, cập nhật cấu hình CORS trong CorsConfig.java.
