@@ -105,7 +105,7 @@ server.servlet.context-path=/api
 // **9. API ENDPOINTS**
 
 // ---- CATEGORIES ----
-// METHOD | ENDPOINT | MÔ TẢ
+//METHOD | ENDPOINT                | MÔ TẢ
 GET     | /categories              | Lấy tất cả danh mục
 GET     | /categories/active       | Danh mục đang hoạt động
 GET     | /categories/{id}         | Lấy theo ID
@@ -115,7 +115,7 @@ DELETE  | /categories/{id}         | Xóa
 PATCH   | /categories/{id}/toggle-status | Bật/tắt trạng thái
 
 // ---- PRODUCTS ----
-// METHOD | ENDPOINT | MÔ TẢ
+// METHOD | ENDPOINT               | MÔ TẢ
 GET     | /products                | Lấy tất cả sản phẩm
 GET     | /products/active         | Sản phẩm đang hoạt động
 GET     | /products/{id}           | Lấy theo ID
@@ -125,8 +125,8 @@ DELETE  | /products/{id}           | Xóa
 PATCH   | /products/{id}/toggle-status | Bật/tắt trạng thái
 
 // ---- PRODUCT VARIANTS ----
-// METHOD | ENDPOINT | MÔ TẢ
-POST    | /products/{productId}/variants           | Thêm variant
+// METHOD | ENDPOINT                                 | MÔ TẢ
+POST    | /products/{productId}/variants             | Thêm variant
 PUT     | /products/{productId}/variants/{variantId} | Cập nhật
 DELETE  | /products/{productId}/variants/{variantId} | Xóa
 
