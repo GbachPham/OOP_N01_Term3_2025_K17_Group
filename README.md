@@ -5,7 +5,7 @@ Dự án hệ thống thương mại điện tử hoàn chỉnh theo kiến trú
 
 * Trang Quản Trị (Angular)
 * API Backend (Java Spring Boot + MongoDB)
-* Giao Diện Người Dùng (HTML/CSS/JS)
+* Giao Diện Người Dùng (HTML/CSS/JS)Bootstrap 5
 
 // **2. THÀNH VIÊN**
 
@@ -34,7 +34,7 @@ Tách biệt frontend và backend theo mô hình microservices.
 
 * Tìm kiếm sản phẩm, giỏ hàng, đặt hàng
 * Responsive trên mọi thiết bị
-* Công nghệ: HTML5, CSS3, JavaScript
+* Công nghệ: HTML5, CSS3, JavaScript,Bootstrap 5
 
 // **5. YÊU CẦU HỆ THỐNG**
 
