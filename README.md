@@ -38,7 +38,7 @@ Tách biệt frontend và backend theo mô hình microservices.
 
 // **5. YÊU CẦU HỆ THỐNG**
 
-* Node.js + npm
+* Angular
 * Java 17+, Maven 3.6+
 * MongoDB 4.4+
 * Trình duyệt hiện đại
